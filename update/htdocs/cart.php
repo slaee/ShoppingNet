@@ -242,7 +242,7 @@ select {
 	margin-left:15px;
 }
 .place-order-au {
-	margin-top:-45px;
+	margin-top:-25px;
 	margin-right:10px;
 	background:#333;
 }
@@ -312,7 +312,7 @@ select {
 <div class="navbar-fixed" >
 <nav class="white" style="box-shadow:0 0 5px 0 #c3c3c3;">
 	<div class="nav-wrapper">
-		<a href="javascript:history.back()" ><i class="material-icons left black-text" style="margin-left:15px;width:23px" >arrow_back_ios</i>
+		<a href="../../../" ><i class="material-icons left black-text" style="margin-left:15px;width:23px" >arrow_back_ios</i>
 		</a>
 		<a href="" class="brand-logo black-text" >Shopping Cart</a>
 		<a href="" >
@@ -442,17 +442,7 @@ unset($_SESSION['already_added_cart']);
 	<div class="nav-wrapper" >
 		<span class="total-text black-text" >total(<?php echo $cart_ct; ?> item)</span> <span class="total-price black-text" >&#8369;<?php echo number_format($all_total); ?></span><br>
 		<span class="tax-t blue-grey-text text-lighten-2 style="" >TAX included, Where applicable</span>
-		<form action="place_order/" method="POST" >
-			<input type="hidden" name="product" value="<?php echo $row['product']; ?>" >
-			<input type="hidden" name="image" value="<?php echo $image1; ?>" >
-			<input type="hidden" name="rnd" value="<?php echo $rnd; ?>" >
-			<input type="hidden" name="price" value="<?php echo ''.$on_sale.''.$not_sale.''; ?>" >
-			<input type="hidden" name="descript" value="<?php echo $descript; ?>" >
-			<input type="hidden" name="preparation" value="<?php echo $business_day; ?>" >
-			<input type="hidden" name="seller" value="<?php echo $seller; ?>" >
-			<input type="hidden" name="location" value="<?php echo $location; ?>" >
-			<button class="btn z-depth-0 right place-order-au" >Checkout</button>
-    	</form>
+		<a href="../../../place_order" class="btn z-depth-0 red lighten-2 right place-order-au" >Next <i class="material-icons" >chevron_right</i></a>
     </div>
 </div>
 
